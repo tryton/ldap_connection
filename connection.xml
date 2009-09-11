@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <menuitem name="LDAP" id="menu_administration"
+            parent="ir.menu_administration"/>
+
+        <record model="ir.ui.view" id="test_connection_init_form">
+            <field name="model">ldap.test_connection.init</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Test LDAP Connection">
+                    <label string="Test Connection Succeed!" id="succeed"/>
+                </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_test_connection">
+            <field name="name">Test LDAP Connection</field>
+            <field name="wiz_name">ldap.test_connection</field>
+            <field name="model">ldap.connection</field>
+        </record>
+
+        <record model="ir.ui.view" id="connection_view_form">
+            <field name="model">ldap.connection</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="LDAP Connection" col="6">
+                    <label name="server"/>
+                    <field name="server"/>
+                    <label name="port"/>
+                    <field name="port"/>
+                    <label name="secure"/>
+                    <field name="secure"/>
+                    <label name="bind_dn"/>
+                    <field name="bind_dn"/>
+                    <label name="bind_pass"/>
+                    <field name="bind_pass" widget="sha"/>
+                    <separator id="buttons" colspan="6"/>
+                    <group colspan="6" id="buttons">
+                        <button name="%(wizard_test_connection)d"
+                            string="_Test Connection" type="action"/>
+                    </group>
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_connection_form">
+            <field name="name">Connection</field>
+            <field name="res_model">ldap.connection</field>
+            <field name="view_type">form</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_connection_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="connection_view_form"/>
+            <field name="act_window" ref="act_connection_form"/>
+        </record>
+        <menuitem parent="menu_administration" action="act_connection_form"
+            id="menu_connection" icon="tryton-list"/>
+
+        <record model="ir.model.access" id="access_ldap_connection">
+            <field name="model" search="[('model', '=', 'ldap.connection')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_ldap_connection_admin">
+            <field name="model" search="[('model', '=', 'ldap.connection')]"/>
+            <field name="group" ref="res.group_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+    </data>
+</tryton>
