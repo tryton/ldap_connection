@@ -1,0 +1,27 @@
+type,name,res_id,src,value,fuzzy
+field,"ldap.connection,bind_dn",0,Bind DN,Lien DN,0
+field,"ldap.connection,bind_pass",0,Bind Pass,Mot de passe du lien,0
+field,"ldap.connection,port",0,Port,Port,0
+field,"ldap.connection,rec_name",0,Name,Nom,0
+field,"ldap.connection,secure",0,Secure,Sécurité,0
+field,"ldap.connection,server",0,Server,Serveur,0
+field,"ldap.connection,uri",0,URI,URI,0
+help,"ldap.connection,bind_dn",0,LDAP DN used to bind,DN LDAP utilisé pour le lien,0
+help,"ldap.connection,bind_pass",0,LDAP password used to bind,Mot de passe LDAP utilisé pour le lien,0
+help,"ldap.connection,port",0,LDAP server port,Port serveur LDAP,0
+help,"ldap.connection,secure",0,LDAP secure connection,Connexion LDAP sécurisée,0
+help,"ldap.connection,server",0,LDAP server name,Nom du serveur LDAP,0
+model,"ir.action,name",act_connection_form,Connection,Connexion,0
+model,"ir.action,name",wizard_test_connection,Test LDAP Connection,Test connexion LDAP,0
+model,"ir.ui.menu,name",menu_connection,Connection,Connexion,0
+model,"ir.ui.menu,name",menu_administration,LDAP,LDAP,0
+model,"ldap.connection,name",0,LDAP Connection,Connexion LDAP,0
+model,"ldap.test_connection.init,name",0,Test Connection - Init,Test connexion - Init,0
+selection,"ldap.connection,secure",0,Never,Aucune,0
+selection,"ldap.connection,secure",0,SSL,SSL,0
+selection,"ldap.connection,secure",0,TLS,TLS,0
+view,ldap.connection,0,LDAP Connection,Connexion LDAP,0
+view,ldap.connection,0,_Test Connection,_Test connexion,0
+view,ldap.test_connection.init,0,Test Connection Succeed!,Test connexion réussi !,0
+view,ldap.test_connection.init,0,Test LDAP Connection,Test connexion LDAP,0
+wizard_button,"ldap.test_connection,init,end",0,Ok,Ok,0
