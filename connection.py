@@ -25,12 +25,16 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
         'readonly': "not bool(bind_dn)",
         }, help='LDAP password used to bind')
     uri = fields.Function('get_uri', type='char', string='URI')
+    active_directory = fields.Boolean('Active Directory')
 
     def default_port(self, cursor, user, context=None):
         return 389
 
     def default_secure(self, cursor, user, context=None):
         return 'never'
+
+    def default_active_directory(self, cursor, user, context=None):
+        return False
 
     def on_change_secure(self, cursor, user, ids, values, context=None):
         res = {}

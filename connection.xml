@@ -41,6 +41,8 @@ this repository contains the full copyright notices and license terms. -->
                     <field name="bind_dn"/>
                     <label name="bind_pass"/>
                     <field name="bind_pass" widget="sha"/>
+                    <label name="active_directory"/>
+                    <field name="active_directory"/>
                     <separator id="buttons" colspan="6"/>
                     <group colspan="6" id="buttons">
                         <button name="%(wizard_test_connection)d"
