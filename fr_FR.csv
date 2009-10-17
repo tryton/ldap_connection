@@ -1,4 +1,5 @@
 type,name,res_id,src,value,fuzzy
+field,"ldap.connection,active_directory",0,Active Directory,Active Directory,0
 field,"ldap.connection,bind_dn",0,Bind DN,Lien DN,0
 field,"ldap.connection,bind_pass",0,Bind Pass,Mot de passe du lien,0
 field,"ldap.connection,port",0,Port,Port,0
