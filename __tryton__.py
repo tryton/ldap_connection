@@ -3,6 +3,7 @@
 {
     'name': 'LDAP Connection',
     'name_de_DE' : 'LDAP Verbindung',
+    'name_es_CO': 'Conexión LDAP',
     'name_es_ES': 'Conexión LDAP',
     'name_fr_FR' : 'Connexion LDAP',
     'version': '1.3.0',
@@ -13,6 +14,7 @@
     'description_de_DE' : '''LDAP Verbindung
     - Fügt Basisunterstützung für Verbindungen zu einem LDAP-Server hinzu
 ''',
+    'description_es_CO': 'Añade soporte básico para conexiones LDAP.',
     'description_es_ES': 'Añade soporte básico para conexiones LDAP.',
     'description_fr_FR': '''Ajoute le support de base pour les connexions LDAP''',
     'depends': [
@@ -24,6 +26,7 @@
     ],
     'translation': [
         'de_DE.csv',
+        'es_CO.csv',
         'es_ES.csv',
         'fr_FR.csv',
     ],
