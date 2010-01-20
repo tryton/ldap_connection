@@ -2,6 +2,7 @@
 #this repository contains the full copyright notices and license terms.
 from trytond.model import ModelView, ModelSQL, ModelSingleton, fields
 from trytond.wizard import Wizard
+from trytond.pyson import Bool, Not, Eval
 import ldap
 
 
@@ -21,8 +22,8 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
         help='LDAP secure connection')
     bind_dn = fields.Char('Bind DN', help='LDAP DN used to bind')
     bind_pass = fields.Char('Bind Pass', states={
-        'required': "bool(bind_dn)",
-        'readonly': "not bool(bind_dn)",
+        'required': Bool(Eval('bind_dn')),
+        'readonly': Not(Bool(Eval('bind_dn'))),
         }, help='LDAP password used to bind')
     uri = fields.Function('get_uri', type='char', string='URI')
     active_directory = fields.Boolean('Active Directory')
