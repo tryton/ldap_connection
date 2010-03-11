@@ -25,7 +25,7 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
         'required': Bool(Eval('bind_dn')),
         'readonly': Not(Bool(Eval('bind_dn'))),
         }, help='LDAP password used to bind')
-    uri = fields.Function('get_uri', type='char', string='URI')
+    uri = fields.Function(fields.Char('URI'), 'get_uri')
     active_directory = fields.Boolean('Active Directory')
 
     def default_port(self, cursor, user, context=None):
@@ -45,7 +45,7 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
             res['port'] = 636
         return res
 
-    def get_uri(self, cursor, user, ids, name, arg, context=None):
+    def get_uri(self, cursor, user, ids, name, context=None):
         res = {}
         for connection in self.browse(cursor, user, ids, context=context):
             res[connection.id] = \
