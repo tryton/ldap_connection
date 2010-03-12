@@ -30,6 +30,7 @@ setup(name='trytond_ldap_connection',
     package_dir={'trytond.modules.ldap_connection': '.'},
     packages=[
         'trytond.modules.ldap_connection',
+        'trytond.modules.ldap_connection.tests',
     ],
     package_data={
         'trytond.modules.ldap_connection': info.get('xml', []) \
@@ -58,4 +59,6 @@ setup(name='trytond_ldap_connection',
     [trytond.modules]
     ldap_connection = trytond.modules.ldap_connection
     """,
+    test_suite='tests',
+    test_loader='trytond.test_loader:Loader',
 )
