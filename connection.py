@@ -37,7 +37,7 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
     def default_active_directory(self, cursor, user, context=None):
         return False
 
-    def on_change_secure(self, cursor, user, ids, values, context=None):
+    def on_change_secure(self, cursor, user, values, context=None):
         res = {}
         if values.get('secure') in ('never', 'tls'):
             res['port'] = self.default_port(cursor, user, context=context)
