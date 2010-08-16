@@ -1,9 +1,9 @@
 #This file is part of Tryton.  The COPYRIGHT file at the top level of
 #this repository contains the full copyright notices and license terms.
+import ldap
 from trytond.model import ModelView, ModelSQL, ModelSingleton, fields
 from trytond.wizard import Wizard
 from trytond.pyson import Bool, Not, Eval
-import ldap
 
 
 class Connection(ModelSingleton, ModelSQL, ModelView):
@@ -28,37 +28,36 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
     uri = fields.Function(fields.Char('URI'), 'get_uri')
     active_directory = fields.Boolean('Active Directory')
 
-    def default_port(self, cursor, user, context=None):
+    def default_port(self):
         return 389
 
-    def default_secure(self, cursor, user, context=None):
+    def default_secure(self):
         return 'never'
 
-    def default_active_directory(self, cursor, user, context=None):
+    def default_active_directory(self):
         return False
 
-    def on_change_secure(self, cursor, user, values, context=None):
+    def on_change_secure(self, values):
         res = {}
         if values.get('secure') in ('never', 'tls'):
-            res['port'] = self.default_port(cursor, user, context=context)
+            res['port'] = self.default_port()
         elif values.get('secure') == 'ssl':
             res['port'] = 636
         return res
 
-    def get_uri(self, cursor, user, ids, name, context=None):
+    def get_uri(self, ids, name):
         res = {}
-        for connection in self.browse(cursor, user, ids, context=context):
+        for connection in self.browse(ids):
             res[connection.id] = \
                     (connection.secure == 'ssl' and 'ldaps' or 'ldap') + \
                     '://%s:%s/' % (connection.server, connection.port)
         return res
 
-    def write(self, cursor, user, ids, values, context=None):
+    def write(self, ids, values):
         if 'bind_dn' in values and not values['bind_dn']:
             values = values.copy()
             values['bind_pass'] = False
-        return super(Connection, self).write(cursor, user, ids, values,
-                context=context)
+        return super(Connection, self).write(ids, values)
 
 Connection()
 
@@ -88,12 +87,11 @@ class TestConnection(Wizard):
         },
     }
 
-    def _test(self, cursor, user, data, context=None):
+    def _test(self, data):
         connection_obj = self.pool.get('ldap.connection')
-        connection_ids = connection_obj.search(cursor, user, [],
-                limit=1, context=context)
-        connection = connection_obj.browse(cursor, user, connection_ids[0],
-                context=context)
+        connection_ids = connection_obj.search([],
+                limit=1)
+        connection = connection_obj.browse(connection_ids[0])
         con = ldap.initialize(connection.uri)
         if connection.secure == 'tls':
             con.start_tls_s()
