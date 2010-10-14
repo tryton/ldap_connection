@@ -14,8 +14,8 @@ help,"ldap.connection,secure",0,LDAP secure connection,Sicherheit für die Verbi
 help,"ldap.connection,server",0,LDAP server name,Name des LDAP-Servers,0
 model,"ir.action,name",act_connection_form,Connection,Verbindung,0
 model,"ir.action,name",wizard_test_connection,Test LDAP Connection,Verbindungstest LDAP,0
-model,"ir.ui.menu,name",menu_connection,Connection,Verbindung,0
 model,"ir.ui.menu,name",menu_administration,LDAP,LDAP,0
+model,"ir.ui.menu,name",menu_connection,Connection,Verbindung,0
 model,"ldap.connection,name",0,LDAP Connection,LDAP Verbindung,0
 model,"ldap.test_connection.init,name",0,Test Connection - Init,Verbindungstest - Init,0
 selection,"ldap.connection,secure",0,Never,Keine,0
