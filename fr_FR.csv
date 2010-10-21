@@ -14,8 +14,8 @@ help,"ldap.connection,secure",0,LDAP secure connection,Connexion LDAP sécurisé
 help,"ldap.connection,server",0,LDAP server name,Nom du serveur LDAP,0
 model,"ir.action,name",act_connection_form,Connection,Connexion,0
 model,"ir.action,name",wizard_test_connection,Test LDAP Connection,Test connexion LDAP,0
-model,"ir.ui.menu,name",menu_connection,Connection,Connexion,0
 model,"ir.ui.menu,name",menu_administration,LDAP,LDAP,0
+model,"ir.ui.menu,name",menu_connection,Connection,Connexion,0
 model,"ldap.connection,name",0,LDAP Connection,Connexion LDAP,0
 model,"ldap.test_connection.init,name",0,Test Connection - Init,Test connexion - Init,0
 selection,"ldap.connection,secure",0,Never,Aucune,0
