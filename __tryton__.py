@@ -6,7 +6,7 @@
     'name_es_CO': 'Conexión LDAP',
     'name_es_ES': 'Conexión LDAP',
     'name_fr_FR' : 'Connexion LDAP',
-    'version': '1.6.1',
+    'version': '1.6.2',
     'author': 'B2CK, Josh Dukes & Udo Spallek',
     'email': 'info@b2ck.com',
     'website': 'http://www.tryton.org/',
