@@ -2,6 +2,7 @@
 #this repository contains the full copyright notices and license terms.
 {
     'name': 'LDAP Connection',
+    'name_bg_BG' : 'LDAP свързване',
     'name_de_DE' : 'LDAP Verbindung',
     'name_es_CO': 'Conexión LDAP',
     'name_es_ES': 'Conexión LDAP',
@@ -11,6 +12,7 @@
     'email': 'info@b2ck.com',
     'website': 'http://www.tryton.org/',
     'description': '''Add basic support for LDAP connection.''',
+    'description_bg_BG': 'Предоставя базова връзка с LDAP.',
     'description_de_DE' : '''LDAP Verbindung
     - Fügt Basisunterstützung für Verbindungen zu einem LDAP-Server hinzu
 ''',
@@ -25,6 +27,7 @@
         'connection.xml',
     ],
     'translation': [
+        'bg_BG.csv',
         'de_DE.csv',
         'es_CO.csv',
         'es_ES.csv',
