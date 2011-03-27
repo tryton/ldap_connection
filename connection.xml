@@ -5,7 +5,7 @@ this repository contains the full copyright notices and license terms. -->
     <data>
 
         <menuitem name="LDAP" id="menu_administration"
-            parent="ir.menu_administration"/>
+            parent="ir.menu_administration" groups="res.group_admin"/>
 
         <record model="ir.ui.view" id="test_connection_init_form">
             <field name="model">ldap.test_connection.init</field>
@@ -63,7 +63,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_connection_form"/>
         </record>
         <menuitem parent="menu_administration" action="act_connection_form"
-            id="menu_connection" icon="tryton-list"/>
+            id="menu_connection" icon="tryton-list" groups="res.group_admin"/>
 
         <record model="ir.model.access" id="access_ldap_connection">
             <field name="model" search="[('model', '=', 'ldap.connection')]"/>
