@@ -4,6 +4,7 @@ import ldap
 from trytond.model import ModelView, ModelSQL, ModelSingleton, fields
 from trytond.wizard import Wizard
 from trytond.pyson import Bool, Not, Eval
+from trytond.pool import Pool
 
 
 class Connection(ModelSingleton, ModelSQL, ModelView):
@@ -88,7 +89,7 @@ class TestConnection(Wizard):
     }
 
     def _test(self, data):
-        connection_obj = self.pool.get('ldap.connection')
+        connection_obj = Pool().get('ldap.connection')
         connection_ids = connection_obj.search([],
                 limit=1)
         connection = connection_obj.browse(connection_ids[0])
