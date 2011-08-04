@@ -23,9 +23,10 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
         help='LDAP secure connection')
     bind_dn = fields.Char('Bind DN', help='LDAP DN used to bind')
     bind_pass = fields.Char('Bind Pass', states={
-        'required': Bool(Eval('bind_dn')),
-        'readonly': Not(Bool(Eval('bind_dn'))),
-        }, help='LDAP password used to bind')
+            'required': Bool(Eval('bind_dn')),
+            'readonly': Not(Bool(Eval('bind_dn'))),
+            }, help='LDAP password used to bind',
+        depends=['bind_dn'])
     uri = fields.Function(fields.Char('URI'), 'get_uri')
     active_directory = fields.Boolean('Active Directory')
 
