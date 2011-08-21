@@ -3,7 +3,7 @@
 import ldap
 from trytond.model import ModelView, ModelSQL, ModelSingleton, fields
 from trytond.wizard import Wizard
-from trytond.pyson import Bool, Not, Eval
+from trytond.pyson import Bool, Eval
 from trytond.pool import Pool
 
 
@@ -24,7 +24,7 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
     bind_dn = fields.Char('Bind DN', help='LDAP DN used to bind')
     bind_pass = fields.Char('Bind Pass', states={
             'required': Bool(Eval('bind_dn')),
-            'readonly': Not(Bool(Eval('bind_dn'))),
+            'readonly': ~Eval('bind_dn'),
             }, help='LDAP password used to bind',
         depends=['bind_dn'])
     uri = fields.Function(fields.Char('URI'), 'get_uri')
