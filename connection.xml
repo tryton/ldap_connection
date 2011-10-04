@@ -18,7 +18,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="arch" type="xml">
                 <![CDATA[
                 <form string="Test LDAP Connection">
-                    <label string="Test Connection Succeed!" id="succeed"/>
+                    <image name="tryton-dialog-information" xexpand="0" xfill="0"/>
+                    <label string="Test Connection Succeed!" id="succeed"
+                        yalign="0.0" xalign="0.0" xexpand="1"/>
                 </form>
                 ]]>
             </field>
