@@ -1,0 +1,111 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:ldap.connection,active_directory:0"
+msgid "Active Directory"
+msgstr "Active Directory"
+
+msgctxt "field:ldap.connection,bind_dn:0"
+msgid "Bind DN"
+msgstr "Bind DN"
+
+msgctxt "field:ldap.connection,bind_pass:0"
+msgid "Bind Pass"
+msgstr "Bind Passwort"
+
+msgctxt "field:ldap.connection,port:0"
+msgid "Port"
+msgstr "Port"
+
+msgctxt "field:ldap.connection,rec_name:0"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:ldap.connection,secure:0"
+msgid "Secure"
+msgstr "Sicherheit"
+
+msgctxt "field:ldap.connection,server:0"
+msgid "Server"
+msgstr "Server"
+
+msgctxt "field:ldap.connection,uri:0"
+msgid "URI"
+msgstr "URI"
+
+msgctxt "help:ldap.connection,bind_dn:0"
+msgid "LDAP DN used to bind"
+msgstr "LDAP DN für die Verbindung"
+
+msgctxt "help:ldap.connection,bind_pass:0"
+msgid "LDAP password used to bind"
+msgstr "LDAP Passwort für die Verbindung"
+
+msgctxt "help:ldap.connection,port:0"
+msgid "LDAP server port"
+msgstr "Passwort für den LDAP-Server"
+
+msgctxt "help:ldap.connection,secure:0"
+msgid "LDAP secure connection"
+msgstr "Sicherheit für die Verbindung zum LDAP-Server"
+
+msgctxt "help:ldap.connection,server:0"
+msgid "LDAP server name"
+msgstr "Name des LDAP-Servers"
+
+msgctxt "model:ir.action,name:act_connection_form"
+msgid "Connection"
+msgstr "Verbindung"
+
+msgctxt "model:ir.action,name:wizard_test_connection"
+msgid "Test LDAP Connection"
+msgstr "Verbindungstest LDAP"
+
+msgctxt "model:ir.ui.menu,name:menu_administration"
+msgid "LDAP"
+msgstr "LDAP"
+
+msgctxt "model:ir.ui.menu,name:menu_connection"
+msgid "Connection"
+msgstr "Verbindung"
+
+msgctxt "model:ldap.connection,name:0"
+msgid "LDAP Connection"
+msgstr "LDAP Verbindung"
+
+msgctxt "model:ldap.test_connection.init,name:0"
+msgid "Test Connection - Init"
+msgstr "Verbindungstest - Init"
+
+msgctxt "selection:ldap.connection,secure:0"
+msgid "Never"
+msgstr "Keine"
+
+msgctxt "selection:ldap.connection,secure:0"
+msgid "SSL"
+msgstr "SSL"
+
+msgctxt "selection:ldap.connection,secure:0"
+msgid "TLS"
+msgstr "TLS"
+
+msgctxt "view:ldap.connection:0"
+msgid "LDAP Connection"
+msgstr "LDAP Verbindung"
+
+msgctxt "view:ldap.connection:0"
+msgid "_Test Connection"
+msgstr "Verbindungs_test"
+
+msgctxt "view:ldap.test_connection.init:0"
+msgid "Test Connection Succeed!"
+msgstr "Verbindungstest erfolgreich!"
+
+msgctxt "view:ldap.test_connection.init:0"
+msgid "Test LDAP Connection"
+msgstr "Verbindungstest LDAP"
+
+msgctxt "wizard_button:ldap.test_connection,init,end:0"
+msgid "Ok"
+msgstr "OK"
