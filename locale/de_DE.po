@@ -76,7 +76,7 @@ msgstr "LDAP Verbindung"
 
 msgctxt "model:ldap.test_connection.init,name:0"
 msgid "Test Connection - Init"
-msgstr "Verbindungstest - Init"
+msgstr "Verbindungstest Init"
 
 msgctxt "selection:ldap.connection,secure:0"
 msgid "Never"
