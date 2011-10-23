@@ -1,0 +1,114 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:ldap.connection,active_directory:0"
+msgid "Active Directory"
+msgstr ""
+
+msgctxt "field:ldap.connection,bind_dn:0"
+msgid "Bind DN"
+msgstr ""
+
+msgctxt "field:ldap.connection,bind_pass:0"
+msgid "Bind Pass"
+msgstr ""
+
+msgctxt "field:ldap.connection,port:0"
+msgid "Port"
+msgstr ""
+
+#, fuzzy
+msgctxt "field:ldap.connection,rec_name:0"
+msgid "Name"
+msgstr "Наименование"
+
+msgctxt "field:ldap.connection,secure:0"
+msgid "Secure"
+msgstr ""
+
+#, fuzzy
+msgctxt "field:ldap.connection,server:0"
+msgid "Server"
+msgstr "Сервер"
+
+msgctxt "field:ldap.connection,uri:0"
+msgid "URI"
+msgstr ""
+
+msgctxt "help:ldap.connection,bind_dn:0"
+msgid "LDAP DN used to bind"
+msgstr ""
+
+msgctxt "help:ldap.connection,bind_pass:0"
+msgid "LDAP password used to bind"
+msgstr ""
+
+msgctxt "help:ldap.connection,port:0"
+msgid "LDAP server port"
+msgstr ""
+
+msgctxt "help:ldap.connection,secure:0"
+msgid "LDAP secure connection"
+msgstr ""
+
+msgctxt "help:ldap.connection,server:0"
+msgid "LDAP server name"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_connection_form"
+msgid "Connection"
+msgstr ""
+
+msgctxt "model:ir.action,name:wizard_test_connection"
+msgid "Test LDAP Connection"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_administration"
+msgid "LDAP"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_connection"
+msgid "Connection"
+msgstr ""
+
+msgctxt "model:ldap.connection,name:0"
+msgid "LDAP Connection"
+msgstr ""
+
+msgctxt "model:ldap.test_connection.init,name:0"
+msgid "Test Connection - Init"
+msgstr ""
+
+msgctxt "selection:ldap.connection,secure:0"
+msgid "Never"
+msgstr ""
+
+msgctxt "selection:ldap.connection,secure:0"
+msgid "SSL"
+msgstr ""
+
+msgctxt "selection:ldap.connection,secure:0"
+msgid "TLS"
+msgstr ""
+
+msgctxt "view:ldap.connection:0"
+msgid "LDAP Connection"
+msgstr ""
+
+msgctxt "view:ldap.connection:0"
+msgid "_Test Connection"
+msgstr ""
+
+msgctxt "view:ldap.test_connection.init:0"
+msgid "Test Connection Succeed!"
+msgstr ""
+
+msgctxt "view:ldap.test_connection.init:0"
+msgid "Test LDAP Connection"
+msgstr ""
+
+#, fuzzy
+msgctxt "wizard_button:ldap.test_connection,init,end:0"
+msgid "Ok"
+msgstr "Ок"
