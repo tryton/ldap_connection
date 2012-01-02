@@ -12,8 +12,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="res.group_admin"/>
         </record>
 
-        <record model="ir.ui.view" id="test_connection_init_form">
-            <field name="model">ldap.test_connection.init</field>
+        <record model="ir.ui.view" id="test_connection_result_form">
+            <field name="model">ldap.test_connection.result</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <![CDATA[

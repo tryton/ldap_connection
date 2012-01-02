@@ -2,9 +2,10 @@
 #this repository contains the full copyright notices and license terms.
 import ldap
 from trytond.model import ModelView, ModelSQL, ModelSingleton, fields
-from trytond.wizard import Wizard
+from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.pyson import Bool, Eval
 from trytond.pool import Pool
+from trytond.transaction import Transaction
 
 
 class Connection(ModelSingleton, ModelSQL, ModelView):
@@ -64,36 +65,30 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
 Connection()
 
 
-class TestConnectionInit(ModelView):
-    'Test Connection - Init'
+class TestConnectionResult(ModelView):
+    'Test Connection'
     _description = __doc__
-    _name = 'ldap.test_connection.init'
+    _name = 'ldap.test_connection.result'
 
-TestConnectionInit()
+TestConnectionResult()
 
 
 class TestConnection(Wizard):
     "Test LDAP Connection"
     _description = __doc__
     _name = 'ldap.test_connection'
-    states = {
-        'init': {
-            'actions': ['_test'],
-            'result': {
-                'type': 'form',
-                'object': 'ldap.test_connection.init',
-                'state': [
-                    ('end', 'Ok', 'tryton-ok', True),
-                ],
-            },
-        },
-    }
+    start_state = 'test'
 
-    def _test(self, data):
+    test = StateTransition()
+    result = StateView('ldap.test_connection.result',
+        'ldap_connection.test_connection_result_form', [
+            Button('Close', 'end', 'tryton-close'),
+            ])
+
+    def transition_test(self, session):
         connection_obj = Pool().get('ldap.connection')
-        connection_ids = connection_obj.search([],
-                limit=1)
-        connection = connection_obj.browse(connection_ids[0])
+        connection_id = Transaction().context.get('active_id')
+        connection = connection_obj.browse(connection_id)
         con = ldap.initialize(connection.uri)
         if connection.secure == 'tls':
             con.start_tls_s()
@@ -101,6 +96,6 @@ class TestConnection(Wizard):
             con.simple_bind_s(connection.bind_dn, connection.bind_pass)
         else:
             con.simple_bind_s()
-        return {}
+        return 'result'
 
 TestConnection()
