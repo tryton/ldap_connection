@@ -59,7 +59,7 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
     def write(self, ids, values):
         if 'bind_dn' in values and not values['bind_dn']:
             values = values.copy()
-            values['bind_pass'] = False
+            values['bind_pass'] = None
         return super(Connection, self).write(ids, values)
 
 Connection()
