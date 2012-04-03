@@ -2,12 +2,12 @@
 #this repository contains the full copyright notices and license terms.
 {
     'name': 'LDAP Connection',
-    'name_bg_BG' : 'LDAP свързване',
+    'name_bg_BG': 'LDAP свързване',
     'name_ca_ES': 'Connexió LDAP',
-    'name_de_DE' : 'LDAP Verbindung',
+    'name_de_DE': 'LDAP Verbindung',
     'name_es_CO': 'Conexión LDAP',
     'name_es_ES': 'Conexión LDAP',
-    'name_fr_FR' : 'Connexion LDAP',
+    'name_fr_FR': 'Connexion LDAP',
     'version': '2.3.0',
     'author': 'B2CK, Josh Dukes & Udo Spallek',
     'email': 'info@b2ck.com',
@@ -15,7 +15,7 @@
     'description': '''Add basic support for LDAP connection.''',
     'description_bg_BG': 'Предоставя базова връзка с LDAP.',
     'description_ca_ES': 'Afegeix suport bàsic per connexions LDAP.',
-    'description_de_DE' : '''LDAP Verbindung
+    'description_de_DE': '''LDAP Verbindung
     - Fügt Basisunterstützung für Verbindungen zu einem LDAP-Server hinzu
 ''',
     'description_es_CO': 'Añade soporte básico para conexiones LDAP.',
