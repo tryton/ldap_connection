@@ -5,6 +5,7 @@
     'name_bg_BG': 'LDAP свързване',
     'name_ca_ES': 'Connexió LDAP',
     'name_de_DE': 'LDAP Verbindung',
+    'name_es_AR': 'Conexión LDAP',
     'name_es_CO': 'Conexión LDAP',
     'name_es_ES': 'Conexión LDAP',
     'name_fr_FR': 'Connexion LDAP',
@@ -18,6 +19,7 @@
     'description_de_DE': '''LDAP Verbindung
     - Fügt Basisunterstützung für Verbindungen zu einem LDAP-Server hinzu
 ''',
+    'description_es_AR': 'Añade soporte básico para conexiones LDAP.',
     'description_es_CO': 'Añade soporte básico para conexiones LDAP.',
     'description_es_ES': 'Añade soporte básico para conexiones LDAP.',
     'description_fr_FR': '''Ajoute le support de base pour les connexions LDAP''',
@@ -33,6 +35,7 @@
         'locale/ca_ES.po',
         'locale/cs_CZ.po',
         'locale/de_DE.po',
+        'locale/es_AR.po',
         'locale/es_CO.po',
         'locale/es_ES.po',
         'locale/fr_FR.po',
