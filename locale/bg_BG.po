@@ -98,10 +98,6 @@ msgctxt "model:ldap.connection,name:"
 msgid "LDAP Connection"
 msgstr "LDAP свързване"
 
-msgctxt "model:ldap.test_connection.init,name:"
-msgid "Test Connection - Init"
-msgstr "Начало на тестово свързване"
-
 msgctxt "model:ldap.test_connection.result,name:"
 msgid "Test Connection"
 msgstr "Изпробване на връзката"
@@ -126,14 +122,6 @@ msgctxt "view:ldap.connection:"
 msgid "_Test Connection"
 msgstr "Тестово свързване"
 
-msgctxt "view:ldap.test_connection.init:"
-msgid "Test Connection Succeed!"
-msgstr "Тестовото свързване успешно!"
-
-msgctxt "view:ldap.test_connection.init:"
-msgid "Test LDAP Connection"
-msgstr "Тестово LDAP свързване"
-
 msgctxt "view:ldap.test_connection.result:"
 msgid "Test Connection Succeed!"
 msgstr "Тестовото свързване успешно!"
@@ -141,10 +129,6 @@ msgstr "Тестовото свързване успешно!"
 msgctxt "view:ldap.test_connection.result:"
 msgid "Test LDAP Connection"
 msgstr "Тестово LDAP свързване"
-
-msgctxt "wizard_button:ldap.test_connection,init,end:"
-msgid "Ok"
-msgstr "Добре"
 
 msgctxt "wizard_button:ldap.test_connection,result,end:"
 msgid "Close"

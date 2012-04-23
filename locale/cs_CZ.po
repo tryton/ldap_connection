@@ -2,55 +2,79 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "field:ldap.connection,active_directory:0"
+msgctxt "field:ldap.connection,active_directory:"
 msgid "Active Directory"
 msgstr ""
 
-msgctxt "field:ldap.connection,bind_dn:0"
+msgctxt "field:ldap.connection,bind_dn:"
 msgid "Bind DN"
 msgstr ""
 
-msgctxt "field:ldap.connection,bind_pass:0"
+msgctxt "field:ldap.connection,bind_pass:"
 msgid "Bind Pass"
 msgstr ""
 
-msgctxt "field:ldap.connection,port:0"
+msgctxt "field:ldap.connection,create_date:"
+msgid "Create Date"
+msgstr ""
+
+msgctxt "field:ldap.connection,create_uid:"
+msgid "Create User"
+msgstr ""
+
+msgctxt "field:ldap.connection,id:"
+msgid "ID"
+msgstr ""
+
+msgctxt "field:ldap.connection,port:"
 msgid "Port"
 msgstr ""
 
-msgctxt "field:ldap.connection,rec_name:0"
+msgctxt "field:ldap.connection,rec_name:"
 msgid "Name"
 msgstr ""
 
-msgctxt "field:ldap.connection,secure:0"
+msgctxt "field:ldap.connection,secure:"
 msgid "Secure"
 msgstr ""
 
-msgctxt "field:ldap.connection,server:0"
+msgctxt "field:ldap.connection,server:"
 msgid "Server"
 msgstr ""
 
-msgctxt "field:ldap.connection,uri:0"
+msgctxt "field:ldap.connection,uri:"
 msgid "URI"
 msgstr ""
 
-msgctxt "help:ldap.connection,bind_dn:0"
+msgctxt "field:ldap.connection,write_date:"
+msgid "Write Date"
+msgstr ""
+
+msgctxt "field:ldap.connection,write_uid:"
+msgid "Write User"
+msgstr ""
+
+msgctxt "field:ldap.test_connection.result,id:"
+msgid "ID"
+msgstr ""
+
+msgctxt "help:ldap.connection,bind_dn:"
 msgid "LDAP DN used to bind"
 msgstr ""
 
-msgctxt "help:ldap.connection,bind_pass:0"
+msgctxt "help:ldap.connection,bind_pass:"
 msgid "LDAP password used to bind"
 msgstr ""
 
-msgctxt "help:ldap.connection,port:0"
+msgctxt "help:ldap.connection,port:"
 msgid "LDAP server port"
 msgstr ""
 
-msgctxt "help:ldap.connection,secure:0"
+msgctxt "help:ldap.connection,secure:"
 msgid "LDAP secure connection"
 msgstr ""
 
-msgctxt "help:ldap.connection,server:0"
+msgctxt "help:ldap.connection,server:"
 msgid "LDAP server name"
 msgstr ""
 
@@ -70,42 +94,42 @@ msgctxt "model:ir.ui.menu,name:menu_connection"
 msgid "Connection"
 msgstr ""
 
-msgctxt "model:ldap.connection,name:0"
+msgctxt "model:ldap.connection,name:"
 msgid "LDAP Connection"
 msgstr ""
 
-msgctxt "model:ldap.test_connection.init,name:0"
-msgid "Test Connection - Init"
+msgctxt "model:ldap.test_connection.result,name:"
+msgid "Test Connection"
 msgstr ""
 
-msgctxt "selection:ldap.connection,secure:0"
+msgctxt "selection:ldap.connection,secure:"
 msgid "Never"
 msgstr ""
 
-msgctxt "selection:ldap.connection,secure:0"
+msgctxt "selection:ldap.connection,secure:"
 msgid "SSL"
 msgstr ""
 
-msgctxt "selection:ldap.connection,secure:0"
+msgctxt "selection:ldap.connection,secure:"
 msgid "TLS"
 msgstr ""
 
-msgctxt "view:ldap.connection:0"
+msgctxt "view:ldap.connection:"
 msgid "LDAP Connection"
 msgstr ""
 
-msgctxt "view:ldap.connection:0"
+msgctxt "view:ldap.connection:"
 msgid "_Test Connection"
 msgstr ""
 
-msgctxt "view:ldap.test_connection.init:0"
+msgctxt "view:ldap.test_connection.result:"
 msgid "Test Connection Succeed!"
 msgstr ""
 
-msgctxt "view:ldap.test_connection.init:0"
+msgctxt "view:ldap.test_connection.result:"
 msgid "Test LDAP Connection"
 msgstr ""
 
-msgctxt "wizard_button:ldap.test_connection,init,end:0"
-msgid "Ok"
+msgctxt "wizard_button:ldap.test_connection,result,end:"
+msgid "Close"
 msgstr ""
