@@ -16,7 +16,7 @@ msgstr "Contrasenya d'enllaç"
 
 msgctxt "field:ldap.connection,create_date:"
 msgid "Create Date"
-msgstr ""
+msgstr "Data creació"
 
 #, fuzzy
 msgctxt "field:ldap.connection,create_uid:"
@@ -25,7 +25,7 @@ msgstr "Crear usuari"
 
 msgctxt "field:ldap.connection,id:"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgctxt "field:ldap.connection,port:"
 msgid "Port"
@@ -49,15 +49,15 @@ msgstr "URI"
 
 msgctxt "field:ldap.connection,write_date:"
 msgid "Write Date"
-msgstr ""
+msgstr "Data modificació"
 
 msgctxt "field:ldap.connection,write_uid:"
 msgid "Write User"
-msgstr ""
+msgstr "Usuari modificació"
 
 msgctxt "field:ldap.test_connection.result,id:"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgctxt "help:ldap.connection,bind_dn:"
 msgid "LDAP DN used to bind"
@@ -101,7 +101,7 @@ msgstr "Connexió LDAP"
 
 msgctxt "model:ldap.test_connection.result,name:"
 msgid "Test Connection"
-msgstr ""
+msgstr "Test connexió"
 
 msgctxt "selection:ldap.connection,secure:"
 msgid "Never"
@@ -125,7 +125,7 @@ msgstr "_Provar connexió"
 
 msgctxt "view:ldap.test_connection.result:"
 msgid "Test Connection Succeed!"
-msgstr ""
+msgstr "Provar connexió LDAP"
 
 #, fuzzy
 msgctxt "view:ldap.test_connection.result:"
