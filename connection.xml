@@ -51,8 +51,8 @@ this repository contains the full copyright notices and license terms. -->
                     <label name="active_directory"/>
                     <field name="active_directory"/>
                     <group colspan="6" id="buttons">
-                        <button name="%(wizard_test_connection)d"
-                            string="_Test Connection" type="action"/>
+                        <button name="test_connection"
+                            string="_Test Connection"/>
                     </group>
                 </form>
                 ]]>

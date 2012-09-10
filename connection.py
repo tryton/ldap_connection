@@ -31,6 +31,12 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
     uri = fields.Function(fields.Char('URI'), 'get_uri')
     active_directory = fields.Boolean('Active Directory')
 
+    def __init__(self):
+        super(Connection, self).__init__()
+        self._buttons.update({
+                'test_connection': {},
+                })
+
     def default_port(self):
         return 389
 
@@ -55,6 +61,10 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
                     (connection.secure == 'ssl' and 'ldaps' or 'ldap') + \
                     '://%s:%s/' % (connection.server, connection.port)
         return res
+
+    @ModelView.button_action('ldap_connection.wizard_test_connection')
+    def test_connection(self, ids):
+        pass
 
     def write(self, ids, values):
         if 'bind_dn' in values and not values['bind_dn']:
