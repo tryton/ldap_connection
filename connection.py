@@ -7,13 +7,13 @@ from trytond.pyson import Bool, Eval
 from trytond.pool import Pool
 from trytond.transaction import Transaction
 
+__all__ = ['Connection', 'TestConnectionResult', 'TestConnection']
+
 
 class Connection(ModelSingleton, ModelSQL, ModelView):
     "LDAP Connection"
-    _description = __doc__
-    _name = 'ldap.connection'
+    __name__ = 'ldap.connection'
     _rec_name = 'server'
-
     server = fields.Char('Server', required=True, help='LDAP server name')
     port = fields.Integer('Port', required=True, help='LDAP server port')
     secure = fields.Selection([
@@ -31,74 +31,68 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
     uri = fields.Function(fields.Char('URI'), 'get_uri')
     active_directory = fields.Boolean('Active Directory')
 
-    def __init__(self):
-        super(Connection, self).__init__()
-        self._buttons.update({
+    @classmethod
+    def __setup__(cls):
+        super(Connection, cls).__setup__()
+        cls._buttons.update({
                 'test_connection': {},
                 })
 
-    def default_port(self):
+    @staticmethod
+    def default_port():
         return 389
 
-    def default_secure(self):
+    @staticmethod
+    def default_secure():
         return 'never'
 
-    def default_active_directory(self):
+    @staticmethod
+    def default_active_directory():
         return False
 
-    def on_change_secure(self, values):
+    def on_change_secure(self):
         res = {}
-        if values.get('secure') in ('never', 'tls'):
+        if self.secure in ('never', 'tls'):
             res['port'] = self.default_port()
-        elif values.get('secure') == 'ssl':
+        elif self.secure == 'ssl':
             res['port'] = 636
         return res
 
-    def get_uri(self, ids, name):
-        res = {}
-        for connection in self.browse(ids):
-            res[connection.id] = \
-                    (connection.secure == 'ssl' and 'ldaps' or 'ldap') + \
-                    '://%s:%s/' % (connection.server, connection.port)
-        return res
+    def get_uri(self, name):
+        return ((self.secure == 'ssl' and 'ldaps' or 'ldap') +
+            '://%s:%s/' % (self.server, self.port))
 
+    @classmethod
     @ModelView.button_action('ldap_connection.wizard_test_connection')
-    def test_connection(self, ids):
+    def test_connection(cls, connections):
         pass
 
-    def write(self, ids, values):
+    @classmethod
+    def write(cls, connections, values):
         if 'bind_dn' in values and not values['bind_dn']:
             values = values.copy()
             values['bind_pass'] = None
-        return super(Connection, self).write(ids, values)
-
-Connection()
+        return super(Connection, cls).write(connections, values)
 
 
 class TestConnectionResult(ModelView):
     'Test Connection'
-    _description = __doc__
-    _name = 'ldap.test_connection.result'
-
-TestConnectionResult()
+    __name__ = 'ldap.test_connection.result'
 
 
 class TestConnection(Wizard):
     "Test LDAP Connection"
-    _description = __doc__
-    _name = 'ldap.test_connection'
+    __name__ = 'ldap.test_connection'
     start_state = 'test'
-
     test = StateTransition()
     result = StateView('ldap.test_connection.result',
         'ldap_connection.test_connection_result_form', [
             Button('Close', 'end', 'tryton-close'),
             ])
 
-    def transition_test(self, session):
-        connection_obj = Pool().get('ldap.connection')
-        connection_id = Transaction().context.get('active_id')
-        connection = connection_obj.browse(connection_id)
+    def transition_test(self):
+        Connection = Pool().get('ldap.connection')
+        connection = Connection(Transaction().context.get('active_id'))
         con = ldap.initialize(connection.uri)
         if connection.secure == 'tls':
             con.start_tls_s()
@@ -107,5 +101,3 @@ class TestConnection(Wizard):
         else:
             con.simple_bind_s()
         return 'result'
-
-TestConnection()
