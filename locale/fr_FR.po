@@ -8,7 +8,7 @@ msgstr "Active Directory"
 
 msgctxt "field:ldap.connection,bind_dn:"
 msgid "Bind DN"
-msgstr "Lien DN"
+msgstr "Bind DN"
 
 msgctxt "field:ldap.connection,bind_pass:"
 msgid "Bind Pass"
@@ -60,7 +60,7 @@ msgstr "ID"
 
 msgctxt "help:ldap.connection,bind_dn:"
 msgid "LDAP DN used to bind"
-msgstr "DN LDAP utilisé pour le lien"
+msgstr "DN LDAP utilisé pour le bind"
 
 msgctxt "help:ldap.connection,bind_pass:"
 msgid "LDAP password used to bind"
