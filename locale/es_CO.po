@@ -16,16 +16,15 @@ msgstr "Contraseña de enlace"
 
 msgctxt "field:ldap.connection,create_date:"
 msgid "Create Date"
-msgstr ""
+msgstr "Fecha de Creación"
 
-#, fuzzy
 msgctxt "field:ldap.connection,create_uid:"
 msgid "Create User"
-msgstr "Crear usuario"
+msgstr "Creado por Usuario"
 
 msgctxt "field:ldap.connection,id:"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgctxt "field:ldap.connection,port:"
 msgid "Port"
@@ -49,15 +48,15 @@ msgstr "URI"
 
 msgctxt "field:ldap.connection,write_date:"
 msgid "Write Date"
-msgstr ""
+msgstr "Fecha de Modificación"
 
 msgctxt "field:ldap.connection,write_uid:"
 msgid "Write User"
-msgstr ""
+msgstr "Modificado por Usuario"
 
 msgctxt "field:ldap.test_connection.result,id:"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgctxt "help:ldap.connection,bind_dn:"
 msgid "LDAP DN used to bind"
@@ -101,7 +100,7 @@ msgstr "Conexión LDAP"
 
 msgctxt "model:ldap.test_connection.result,name:"
 msgid "Test Connection"
-msgstr ""
+msgstr "Test de Conexión"
 
 msgctxt "selection:ldap.connection,secure:"
 msgid "Never"
@@ -125,14 +124,12 @@ msgstr "_Probar conexión"
 
 msgctxt "view:ldap.test_connection.result:"
 msgid "Test Connection Succeed!"
-msgstr ""
+msgstr "Test de Conexión Exitosa!"
 
-#, fuzzy
 msgctxt "view:ldap.test_connection.result:"
 msgid "Test LDAP Connection"
 msgstr "Probar conexión LDAP"
 
-#, fuzzy
 msgctxt "wizard_button:ldap.test_connection,result,end:"
 msgid "Close"
 msgstr "Cerrar"
