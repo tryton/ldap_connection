@@ -45,7 +45,7 @@ setup(name='trytond_ldap_connection',
         ],
     package_data={
         'trytond.modules.ldap_connection': (info.get('xml', [])
-            + ['tryton.cfg', 'locale/*.po']),
+            + ['tryton.cfg', 'view/*.xml', 'locale/*.po']),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
