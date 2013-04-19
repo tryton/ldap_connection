@@ -18,10 +18,9 @@ msgctxt "field:ldap.connection,create_date:"
 msgid "Create Date"
 msgstr "Data creació"
 
-#, fuzzy
 msgctxt "field:ldap.connection,create_uid:"
 msgid "Create User"
-msgstr "Crear usuari"
+msgstr "Usuari creació"
 
 msgctxt "field:ldap.connection,id:"
 msgid "ID"
@@ -37,7 +36,7 @@ msgstr "Nom"
 
 msgctxt "field:ldap.connection,secure:"
 msgid "Secure"
-msgstr "Segura"
+msgstr "Seguretat"
 
 msgctxt "field:ldap.connection,server:"
 msgid "Server"
@@ -85,7 +84,7 @@ msgstr "Connexió"
 
 msgctxt "model:ir.action,name:wizard_test_connection"
 msgid "Test LDAP Connection"
-msgstr "Provar connexió LDAP"
+msgstr "Prova connexió LDAP"
 
 msgctxt "model:ir.ui.menu,name:menu_administration"
 msgid "LDAP"
@@ -121,18 +120,16 @@ msgstr "Connexió LDAP"
 
 msgctxt "view:ldap.connection:"
 msgid "_Test Connection"
-msgstr "_Provar connexió"
+msgstr "_Prova connexió"
 
 msgctxt "view:ldap.test_connection.result:"
 msgid "Test Connection Succeed!"
-msgstr "Provar connexió LDAP"
+msgstr "La prova de connexió s'ha realitzat amb èxit"
 
-#, fuzzy
 msgctxt "view:ldap.test_connection.result:"
 msgid "Test LDAP Connection"
-msgstr "Provar connexió LDAP"
+msgstr "Prova connexió LDAP"
 
-#, fuzzy
 msgctxt "wizard_button:ldap.test_connection,result,end:"
 msgid "Close"
-msgstr "Tancat"
+msgstr "Tanca"
