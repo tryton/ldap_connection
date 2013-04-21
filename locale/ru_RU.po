@@ -14,17 +14,20 @@ msgctxt "field:ldap.connection,bind_pass:"
 msgid "Bind Pass"
 msgstr ""
 
+#, fuzzy
 msgctxt "field:ldap.connection,create_date:"
 msgid "Create Date"
-msgstr ""
+msgstr "Дата создания"
 
+#, fuzzy
 msgctxt "field:ldap.connection,create_uid:"
 msgid "Create User"
-msgstr ""
+msgstr "Создано пользователем"
 
+#, fuzzy
 msgctxt "field:ldap.connection,id:"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgctxt "field:ldap.connection,port:"
 msgid "Port"
@@ -48,17 +51,20 @@ msgctxt "field:ldap.connection,uri:"
 msgid "URI"
 msgstr ""
 
+#, fuzzy
 msgctxt "field:ldap.connection,write_date:"
 msgid "Write Date"
-msgstr ""
+msgstr "Дата изменения"
 
+#, fuzzy
 msgctxt "field:ldap.connection,write_uid:"
 msgid "Write User"
-msgstr ""
+msgstr "Изменено пользователем"
 
+#, fuzzy
 msgctxt "field:ldap.test_connection.result,id:"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgctxt "help:ldap.connection,bind_dn:"
 msgid "LDAP DN used to bind"
