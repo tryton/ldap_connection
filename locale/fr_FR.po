@@ -107,20 +107,8 @@ msgid "Never"
 msgstr "Aucune"
 
 msgctxt "selection:ldap.connection,secure:"
-msgid "Never"
-msgstr "Aucune"
-
-msgctxt "selection:ldap.connection,secure:"
 msgid "SSL"
 msgstr "SSL"
-
-msgctxt "selection:ldap.connection,secure:"
-msgid "SSL"
-msgstr "SSL"
-
-msgctxt "selection:ldap.connection,secure:"
-msgid "TLS"
-msgstr "TLS"
 
 msgctxt "selection:ldap.connection,secure:"
 msgid "TLS"
@@ -129,14 +117,6 @@ msgstr "TLS"
 msgctxt "view:ldap.connection:"
 msgid "LDAP Connection"
 msgstr "Connexion LDAP"
-
-msgctxt "view:ldap.connection:"
-msgid "LDAP Connection"
-msgstr "Connexion LDAP"
-
-msgctxt "view:ldap.connection:"
-msgid "_Test Connection"
-msgstr "_Test connexion"
 
 msgctxt "view:ldap.connection:"
 msgid "_Test Connection"
