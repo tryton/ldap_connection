@@ -68,11 +68,15 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
         pass
 
     @classmethod
-    def write(cls, connections, values):
-        if 'bind_dn' in values and not values['bind_dn']:
-            values = values.copy()
-            values['bind_pass'] = None
-        return super(Connection, cls).write(connections, values)
+    def write(cls, *args):
+        actions = iter(args)
+        args = []
+        for connections, values in zip(actions, actions):
+            if 'bind_dn' in values and not values['bind_dn']:
+                values = values.copy()
+                values['bind_pass'] = None
+            args.extend((connections, values))
+        return super(Connection, cls).write(*args)
 
 
 class TestConnectionResult(ModelView):
