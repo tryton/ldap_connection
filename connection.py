@@ -20,7 +20,7 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
         ('never', 'Never'),
         ('ssl', 'SSL'),
         ('tls', 'TLS'),
-        ], 'Secure', on_change=['secure'], required=True,
+        ], 'Secure', required=True,
         help='LDAP secure connection')
     bind_dn = fields.Char('Bind DN', help='LDAP DN used to bind')
     bind_pass = fields.Char('Bind Pass', states={
@@ -50,6 +50,7 @@ class Connection(ModelSingleton, ModelSQL, ModelView):
     def default_active_directory():
         return False
 
+    @fields.depends('secure')
     def on_change_secure(self):
         res = {}
         if self.secure in ('never', 'tls'):
