@@ -11,7 +11,7 @@ this repository contains the full copyright notices and license terms. -->
     <label name="bind_dn"/>
     <field name="bind_dn"/>
     <label name="bind_pass"/>
-    <field name="bind_pass" widget="sha"/>
+    <field name="bind_pass" widget="password"/>
     <label name="active_directory"/>
     <field name="active_directory"/>
     <group colspan="6" id="buttons">
