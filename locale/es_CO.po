@@ -4,7 +4,7 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:ldap.connection,active_directory:"
 msgid "Active Directory"
-msgstr "Directorio activo"
+msgstr "Directorio Activo"
 
 msgctxt "field:ldap.connection,bind_dn:"
 msgid "Bind DN"
