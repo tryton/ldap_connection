@@ -60,23 +60,23 @@ msgstr "ID"
 
 msgctxt "help:ldap.connection,bind_dn:"
 msgid "LDAP DN used to bind"
-msgstr "DN LDAP utilitzat per enllaçar"
+msgstr "DN LDAP utilitzat per enllaçar."
 
 msgctxt "help:ldap.connection,bind_pass:"
 msgid "LDAP password used to bind"
-msgstr "Contrasenya LDAP utilitzada per enllaçar"
+msgstr "Contrasenya LDAP utilitzada per enllaçar."
 
 msgctxt "help:ldap.connection,port:"
 msgid "LDAP server port"
-msgstr "Port del servidor LDAP"
+msgstr "Port del servidor LDAP."
 
 msgctxt "help:ldap.connection,secure:"
 msgid "LDAP secure connection"
-msgstr "Connexió LDAP segura"
+msgstr "Connexió LDAP segura."
 
 msgctxt "help:ldap.connection,server:"
 msgid "LDAP server name"
-msgstr "Nom del servidor LDAP"
+msgstr "Nom del servidor LDAP."
 
 msgctxt "model:ir.action,name:act_connection_form"
 msgid "Connection"
